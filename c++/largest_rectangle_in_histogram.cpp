@@ -72,7 +72,7 @@ class Solution {
                 if(ht.top() > height){
                     popPos = false;
                     do{
-                        // this is for the case when we are removing 2 elements from ht stacks
+                        // this is for the case when we are removing 2 or more elements from ht stacks
                         if(popPos){
                             pos.pop();
                         }

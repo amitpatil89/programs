@@ -38,7 +38,7 @@ class Solution {
             int currRad;
             int minRad;
 
-            // Sorting is required because rest of the algorithm things that 
+            // Sorting is required because rest of the algorithm thinks that 
             // houses and heaters are in sorted order.
             sort(houses.begin(), houses.end());
             sort(heaters.begin(), heaters.end());

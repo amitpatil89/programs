@@ -48,9 +48,9 @@ class Solution {
             int nCol = (nRow)? board[0].size() : 0;
             bool ret = false;
             // we will go from upper left corner, we will check if the 
-            // [row][col] = [row+1][col]  AND [row][col] = [row+2][col]
+            // [row][col] == [row+1][col]  AND [row][col] == [row+2][col]
             // OR
-            // [row][col] = [row][col+1]  AND [row][col] = [row][col+2]
+            // [row][col] == [row][col+1]  AND [row][col] == [row][col+2]
             // if yes --> mark corresponding refBoard 0 also ret = true
             // if no ---> move ahead
 
