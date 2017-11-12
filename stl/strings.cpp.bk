@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+vector<string> split(string str, char delimiter){
+
+    string::iterator itStart, itEnd= str.begin();
+    cout << str << endl << endl;
+    vector<string> ret;
+    do{
+
+        itStart = find_if(itEnd, str.end(), [delimiter](char c){return (c != delimiter);});
+        itEnd = find_if(itStart, str.end(), [delimiter](char c){return (c == delimiter);});
+        if(itStart == str.end()){
+            break;
+        }
+        ret.push_back(string (itStart, itEnd));
+    }while(itEnd != str.end());
+    return ret;
+}
+
+int main(int argc, char *argv[]){
+
+    string str = "This is so cool!";
+    vector<string> tokens;
+    tokens = split(str, ' ');
+    for(auto token : tokens){
+        cout << token << endl;
+    }
+    cout << endl << endl;
+
+    
+    return 0;
+}
