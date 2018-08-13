@@ -73,21 +73,21 @@ class Solution {
             groupB[p2] = 1;
 
             //
-            // Queue to go through the dislikes pairs. Initialize the queue with all the
-            // dislike pairs. This Q is used to do a BFS with a twist. The motivation is 
+            // Queue is used to go through the remaining dislikes pairs. Initialize the queue with all the
+            // remaining dislike pairs. This Q is used to do a BFS with a twist. The motivation is 
             // to initialize the map as above and then use the queue to do the following
             // for any pair (p1, p2) in the Queue.
             // 
-            // if p1 or/and p2 is set to 1 in groupA/B, we know that there is some
-            // preexisting requrement for them. So we check the following
-            // [1] If p1 or p2 are set in the same group, this is Collision! return false
-            // [2] If p1 or p2 are not set in any group, we are not sure which group p1/p2 should go
+            // Concept: if p1 or/and p2 is set to 1 in groupA/B, we know that there is some
+            // pre-existing requrement for them. So we check the following
+            //
+            // (1) If p1 and p2 are set in the same group, this is Collision! return false.
+            // (2) If p1 and p2 are not set in any group, we are not sure which group p1/p2 should go
             //     so, if 'adjust' is not set to true (explained later when it is set/reset), just 
-            //     put the pair in the queue again. Chances are that the coming pairs will add some
+            //     put the pair in the queue again. Chances are that the upcoming pairs will add some
             //     information to chose a group for these people.
-            // [3] One of the p1/p2 are set in each of the groups. If both are set in different groups.
-            //     we just set them again(or u can add a check). Otherwise we set the map anyway if it
-            //     is not set.
+            // (3) If p1 and p2 are already set in opposite groups, our work is done for that pair.
+            // (4) If only one of {p1,p2} is set in a group, we set the other person in opposite group.
             //
             // Now the 'twist' i.e. adjust == true/false
             // In our algorithm, it is quite possible that there are some pairs which are pretty distant
@@ -95,7 +95,7 @@ class Solution {
             //
             // Input: N=6; dislikes=[[1,2],[2,3],[1,4],[5,6]]
             //
-            // In the above case, our BFS will keep on looping due to [2]. To break this loop, we keep
+            // In the above case, our BFS will keep on looping due to pair [5,6] as per (2). To break this loop, we keep
             // track of current queue size i.e. qSize and previous/old queue size i.e. oldSize. 
             // When qSize == oldSize; that is an indication for us to 'adjust' the mapping. In this case,
             // we take the first pair(p1,p2) in the existing queue and put p1 and groupA and p2 in groupB.
