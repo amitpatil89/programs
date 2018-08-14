@@ -1,6 +1,6 @@
 //  Leetcode #61 Rotate List (https://leetcode.com/problems/rotate-list/description/)
 //  
-//  Given a linked list, rotate the list to the right by k places, where k is non-negative.
+//  Given a linked list, rotate the list to the RIGHT by k places, where k is non-negative.
 //  
 //  Example 1:
 //  Input: 1->2->3->4->5->NULL, k = 2
@@ -17,6 +17,10 @@
 //  rotate 2 steps to the right: 1->2->0->NULL
 //  rotate 3 steps to the right: 0->1->2->NULL
 //  rotate 4 steps to the right: 2->0->1->NULL
+
+//
+//  NOTE: ASK IS TO SHIFT ROTATE THE LIST TO RIGHT
+//
 
 /**
  * Definition for singly-linked list.
