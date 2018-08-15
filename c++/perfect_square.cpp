@@ -67,7 +67,7 @@ class Solution {
                     update = true;
                     if (b*b == num) return true;
                     a = b;
-                    b = base + (int)pow(2,i);
+                    b = base + pow(2,i); // we can use 1<<i with i starting at 0. Instead of pow 
                     i++;
                 }
 
