@@ -15,7 +15,8 @@ Output: False
 Explanation: You can't get a non-decreasing array by modify at most one element.
 Note: The n belongs to [1, 10,000].
 
-Solution: There are 2 cases: Refer diagram (https://github.com/amitpatil89/programs/blob/master/non_code_misc/Leetcode%20%23655.jpeg)
+Solution: There are 2 cases: 
+          Refer diagram - https://github.com/amitpatil89/programs/blob/master/non_code_misc/Leetcode_655.jpg
           case I : nums[i] < nums[i-1] && nums[i-2] <= nums[i] 
           case II: nums[i] < nums[i-1] && nums[i-2] > nums[i]
           
