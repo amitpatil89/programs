@@ -55,7 +55,7 @@ Class Solution {
                         }
                         modified = true;
                     } else {
-                        // We can modify just once. So return false.
+                        // We can't modify more than once. So return false.
                         return false;
                     }
                 }
