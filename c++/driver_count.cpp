@@ -84,7 +84,7 @@ int main(){
                              };
     cout << "Input: " << endl;
     for (auto row: ref){
-        for(auto col: ref[0]){
+        for(auto col: row){
             cout << col << " ";
         }
         cout << endl;
