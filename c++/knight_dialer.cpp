@@ -45,7 +45,7 @@ public:
        // that number.
        //
        // .  For e.g. take number 4. There are three numbers {0,3 and 9} that we can
-       //              reach from 4. So the formula for calculating value for 4 is in
+       //              reach from 4. So the formula for calculating value for 4 in
        //              Nth iteration is.
        // .
        //    dp[4][N] = dp[0][N-1] + dp[3][N-1] + dp[9][N-1]
