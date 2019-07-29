@@ -1,4 +1,4 @@
-//  #Leetcode 523. Continuous Subarray Sum
+//  #Leetcode 523. Continuous Subarray Sum [Twilio]
 //  Medium
 //  
 //  Given a list of non-negative numbers and a target integer k, write a function to check if the array 
@@ -38,7 +38,7 @@ public:
         // k could be negative. Take Absolute value of k
         k = abs(k);
 
-        // Map for maintaining the visited mods
+        // Map for maintaining visited mod's index
         // key   = mod
         // value = index
         map<int, int> ref;
