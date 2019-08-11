@@ -1,3 +1,24 @@
+//  
+//  Problem: Consider the matrix which has 0, -1 and some positive integers. 
+//           0  ==> Path Robot can take
+//           -1 ==> Blockages that robot can't pass.
+//           Positive integers ==> Product IDs (robot can pass through this pixel.)
+//  
+//           Starting from [0,0], find the path that robot should take to pickup all the Product IDs.
+//  
+//  
+//          { 0,  0,  0,  0, -1, 11, -1},
+//          { 0,  5,  6,  8, -1,  0, -1},
+//          {-1,  0,  0, -1, -1,  0, -1},
+//          {-1,  0,  0,  0, -1,  0,  0},
+//          {-1, -1,  0,  0, -1,  0,  0},
+//          { 6, -1,  7,  0,  0,  0,  0},
+//          { 0, -1,  0,  0,  0,  0,  0},
+//          { 0, -1,  0,  0,  0, 12,  0},
+//          { 0,  0,  0,  0,  0,  0,  0}
+//  
+
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
