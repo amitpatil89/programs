@@ -71,6 +71,8 @@ public:
         }
         
         // If we encounter 0, swap that 0 with the value pointed by p0
+        // Understand that, p0 is always equal of behind i, hence we
+        // don't need to check for 2 again.
         if (flag[i] == 0) {
             swap(flag[i], flag[p0]);
             p0++;
